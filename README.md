@@ -1,4 +1,4 @@
-# Description of the solution
+# Solution Description
 The solution was developed according to the requirements, in Java with SpringBoot. All the requested points were met, including:
 - An endpoint for requests for new records that receives a JSON payload with the values of the title, description and base64File
   - The creationDate is added when mapping the DTO (Data Transfer Object) for file creation to the FileEntity type item that will be stored in the database.
@@ -141,3 +141,6 @@ curl --location 'http://localhost:8080/api/files/all' \
     }
 }'
 ```
+
+# Notas
+The utils folder provides a JSON file, corresponding to a collection of example requests that can be imported into Postman to test the application's functionality.
