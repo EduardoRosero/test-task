@@ -1,3 +1,21 @@
+# Description of the solution
+The solution was developed according to the requirements, in Java with SpringBoot. All the requested points were met, including:
+- An endpoint for requests for new records that receives a JSON payload with the values of the title, description and base64File
+  - The creationDate is added when mapping the DTO (Data Transfer Object) for file creation to the FileEntity type item that will be stored in the database.
+  - The id is automatically generated when inserting the file into the database.
+- An endpoint to retrieve files by id, which receives the id of the record to be retrieved as a parameter in the url.
+- An endpoint to retrieve all files that implements pagination, additionally other functionalities were added such as filters and data sorting, as explained in more detail in the tests section.
+- A test clase for executing tests in the application by requesting the endpoints with example data.
+- The complete logic for wrapping both database an application in docker containers.
+
+> A basic script was also provided to facilitate the execution of the application.
+
+## Technical considerations
+For the solution, some additional aspects were worked on, which are presented below:
+- Exception handling: validations were added to prevent exceptions from occurring during the execution of the application. A class was also added to handle exceptions in a customized way. Logs were added to the application to have more detail when there are errors.
+- Programming standards: several standards are met within the application, from basic ones such as nomenclature, to some structural patterns, such as the use of packages and specific classes for each functionality. Design patterns are also handled, such as the use of DTOs (Data Transfer Object) for receiving requests. Data mapping classes are handled to move from one type of object to another. Customized specifications are handled for the application of dynamic filters in the data query.
+- Security issues: The handling of environment variables for the definition of sensitive data such as users and passwords is considered. This applies both in the application configuration (.yml properties files) and in dockerization in the compose.yml file, in order to avoid the exposure of sensitive data.
+
 # Running the application
 ### Creating the necessary files
 To run the application, you must provide a .env file, to define the required parameters such as:
