@@ -142,5 +142,5 @@ curl --location 'http://localhost:8080/api/files/all' \
 }'
 ```
 
-# Notas
+# Notes
 The utils folder provides a JSON file, corresponding to a collection of example requests that can be imported into Postman to test the application's functionality.
